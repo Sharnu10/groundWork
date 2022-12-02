@@ -10,7 +10,6 @@ import { TodoService } from './todo.service';
 export class AppComponent {
   title = 'client';
 
-  
   todos: Todo[] = [];
 
   newTodo: Todo = {

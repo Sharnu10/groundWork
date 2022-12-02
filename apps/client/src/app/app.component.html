@@ -17,6 +17,9 @@
             Delete
           </button>
         </li>
+        <li *ngIf="!this.todos.length">
+          <span class="redText">No data from the database or server</span>
+        </li>
       </ul>
       <div class="todo__form">
         <label for="title">Title</label>
