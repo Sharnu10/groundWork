@@ -10,7 +10,11 @@ import { TodoComponent } from './todo/todo/todo.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, TodoComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    TodoComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [TodoService],
   bootstrap: [AppComponent],
