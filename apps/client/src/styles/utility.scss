@@ -3,3 +3,23 @@
 .redText {
     color: $txtRedColor;
 }
+
+// flex 
+.flexRowWrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flexSpaceAround {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+// margin
+.m-05 {
+    margin: 0.5rem
+}
+
+// cursor
+.pointer {
+ cursor: pointer;
+}

@@ -4,7 +4,9 @@ import { TodoComponent } from "./todo/todo/todo.component";
 
 const routes: Routes = [
     // { path: '', component: TodoComponent },
-    { path: '', loadChildren: () => import('./shell/shell/shell.module').then((m) => m.ShellModule)},
+    { 
+        path: '', loadChildren: () => import('./shell/shell/shell.module').then((m) => m.ShellModule),
+    },
     { path: '**', redirectTo: '' }
 ];
 
