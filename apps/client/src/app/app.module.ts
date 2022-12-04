@@ -8,13 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { TodoComponent } from './todo/todo/todo.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SeriesComponent } from './series/series.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NxWelcomeComponent,
-    TodoComponent,
-  ],
+    TodoComponent
+    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [TodoService],
   bootstrap: [AppComponent],

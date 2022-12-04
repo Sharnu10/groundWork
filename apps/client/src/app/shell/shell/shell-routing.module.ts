@@ -12,6 +12,10 @@ const routes: Routes = [
             {
                 path: 'todo',
                 component: TodoComponent
+            },
+            {
+                path: 'series',
+                loadChildren: () => import('../../series/series.module').then((m) => m.SeriesModule),
             }
         ]
     },
