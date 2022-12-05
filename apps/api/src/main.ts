@@ -14,7 +14,7 @@ import { TodoService } from './app/todo/todo.service';
 const app = express();
 
 // app.use('/assets', express.static(path.join(__dirname, 'assets')));
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/api', (req, res) => {
