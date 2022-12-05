@@ -9,7 +9,7 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 })
 export class SeriesComponent {
   series = 'Series';
-
+  modelValues: string | undefined;
   form = new FormGroup({});
   model = { email: 'email@gmail.com' };
   fields: FormlyFieldConfig[] = [
@@ -22,9 +22,28 @@ export class SeriesComponent {
         required: true,
       },
     },
+    {
+      key: 'selectKey',
+      type: 'select',
+      templateOptions: {
+        label: 'select one of value',
+        required: true,
+        labelProp: 'label',
+        options: [
+          { label: 'Dr', value: 'dr' },
+          { label: 'Mr', value: 'mr' },
+          { label: 'Mrs', value: 'mrs' },
+        ],
+      },
+    },
   ];
 
   onSubmit(model: any) {
-    console.log('model:  ', model);
+    this.modelValues = JSON.stringify(model);
+  }
+
+  clearForm() {
+    this.form?.reset();
+    this.modelValues = JSON.stringify(this.model);
   }
 }
