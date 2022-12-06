@@ -1,0 +1,24 @@
+@import "@angular/material/theming";
+@include mat-core();
+
+@import "./variables.scss";
+
+// hue. Available color palettes: https://material.io/design/color/
+//  cust is custom
+$cust-app-primary: mat-palette($mat-blue-grey);
+$cust-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$cust-app-warn: mat-palette($mat-red);
+
+$cust-app-theme: mat-light-theme($cust-app-primary, $cust-app-accent, $cust-app-warn);
+@include angular-material-theme($cust-app-theme);
+
+
+.alternate-theme {
+    $alternate-primary: mat-palette($mat-light-blue);
+    $alternate-accent: mat-palette($mat-yellow, 400);
+
+    $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+    @include angular-material-theme($alternate-theme);
+}
