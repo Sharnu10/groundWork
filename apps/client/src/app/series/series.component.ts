@@ -11,7 +11,8 @@ export class SeriesComponent {
   series = 'Series';
   modelValues: string | undefined;
   form = new FormGroup({});
-  model = { email: 'email@gmail.com' };
+  model = {};
+  // model = { email: 'email@gmail.com' };
   fields: FormlyFieldConfig[] = [
     {
       key: 'email',
@@ -35,6 +36,9 @@ export class SeriesComponent {
           { label: 'Mrs', value: 'mrs' },
         ],
       },
+      expressions: {
+        hide: '!model.email',
+      },
     },
   ];
 
@@ -45,5 +49,9 @@ export class SeriesComponent {
   clearForm() {
     this.form?.reset();
     this.modelValues = JSON.stringify(this.model);
+  }
+
+  resetForm() {
+    this.form?.reset();
   }
 }

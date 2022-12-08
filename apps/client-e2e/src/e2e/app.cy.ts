@@ -10,4 +10,9 @@ describe('client', () => {
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome client');
   });
+
+  it('get.. ', () => {
+    // check Todo text in shell component.
+    cy.get('button').contains('Todo');
+  });
 });
