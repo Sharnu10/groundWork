@@ -9,6 +9,7 @@
     display: flex;
     flex-flow: row wrap;
 }
+
 .flexSpaceAround {
     align-items: flex-start;
     justify-content: space-between;
@@ -18,13 +19,36 @@
 .m-05 {
     margin: 0.5rem
 }
+
 .m-025 {
     margin: 0.25rem
+}
+.m-t-1 {
+    margin-top: 1rem;
 }
 .m-l-1 {
     margin-left: 10px !important;
 }
+
 // cursor
 .pointer {
- cursor: pointer;
+    cursor: pointer;
 }
+
+$referanceWith: 8.333333%;
+
+@function calc-width($multiplier) {
+    @return $multiplier * $referanceWith; 
+}
+
+.flex-1 {
+    width: calc-width(1);
+}
+.flex-2 {
+    width: calc-width(2);
+}
+
+.flex-8 {
+    width: calc-width(8);
+}
+

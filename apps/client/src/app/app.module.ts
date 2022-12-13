@@ -11,6 +11,7 @@ import { TodoService } from './todo.service';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { TodoComponent } from './todo/todo/todo.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,12 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, NxWelcomeComponent, TodoComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    TodoComponent,
+    LoginComponent,
+  ],
   providers: [TodoService],
   bootstrap: [AppComponent],
 })
