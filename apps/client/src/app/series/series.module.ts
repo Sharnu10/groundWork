@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from '../../core/core.module';
-import { SeriesRoutingModule } from './Series-routing.module';
+import { CoreModule } from '../core/core.module';
+import { SeriesRoutingModule } from './series-routing.module';
 import { SeriesComponent } from './series.component';
 
 @NgModule({

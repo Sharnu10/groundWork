@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { CustomButtonComponent } from '../form-core/custom-formly/custom-formly-types/custom-button/custom-button.component';
 
 @Component({
   selector: 'groundwork-login',
@@ -12,15 +13,16 @@ export class LoginComponent implements OnInit {
   model = {};
   fields: FormlyFieldConfig[] = [
     {
-      // type: 'flex-layout',
-      // templateOptions: {
-      //   fxLayout: 'row',
-      // },
+      type: 'flex-layout',
+      templateOptions: {
+        fxLayout: 'row',
+      },
+      fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
           key: 'loginUser',
           type: 'input',
-          className: 'flex-2',
+          className: 'flex-12',
           templateOptions: {
             required: true,
             placeholder: 'Enter login user...',
@@ -29,21 +31,29 @@ export class LoginComponent implements OnInit {
         {
           key: 'password',
           type: 'input',
-          className: 'flex-8',
+          className: 'flex-4',
           templateOptions: {
             required: true,
             placeholder: 'Enter login password',
             type: 'password',
           },
         },
-        { className: 'flex-12' },
+        { className: 'flex-1' },
         {
           key: 'rememberMe',
+          className: 'flex-2',
           type: 'checkbox',
           templateOptions: {
-            label: 'Remenber Me',
+            label: 'Remember Me',
           },
         },
+        {
+          key: 'cust-input',
+          type: CustomButtonComponent,
+        },
+        // {
+        //   key: 'forgotPassword',
+        // },
       ],
     },
   ];

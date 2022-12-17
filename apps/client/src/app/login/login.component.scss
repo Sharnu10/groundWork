@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.login-main {
+    justify-content: center;
+
+    .container {
+        box-shadow: $box-shadow;
+    }
+}
+
