@@ -1,5 +1,20 @@
-<!-- <groundwork-nx-welcome></groundwork-nx-welcome> <router-outlet></router-outlet> -->
+<div class="container">
+  <div id="title">
+    {{ title }}
+  </div>
 
-<div>
-  {{ title }}
+  <div class="weather-container">
+    <section>
+      <header>
+        <div class="col">City</div>
+        <div class="col">Tempature</div>
+        <div class="col">humidity</div>
+      </header>
+      <div class="row">
+        <div class="col">{{ weatherData.name }}</div>
+        <div class="col">{{ weatherData.main.temp }}</div>
+        <div class="col">{{ weatherData.main.humidity }}</div>
+      </div>
+    </section>
+  </div>
 </div>
