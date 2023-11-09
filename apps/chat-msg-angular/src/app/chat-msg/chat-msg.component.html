@@ -1,0 +1,29 @@
+<body class="container">
+  <div class="title">Socket.IO chat</div>
+
+  <ul id="messages">
+    <div>
+      <input
+        [(ngModel)]="message"
+        name="msg"
+        placeholder="Enter message... "
+        (keyup)="$event.keyCode === 13 && sendMessage()"
+        autocomplete="off"
+      />
+      <button (click)="onSubmit()">Send</button>
+    </div>
+    <div class="getMsg">
+      <button (click)="getMsg()">Receive</button>
+    </div>
+  </ul>
+
+  <div class="message-list">
+    <div>
+      <ul id="listOfMessages">
+        <li class="singleMessage" *ngFor="let message of messageList">
+          {{ message }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
