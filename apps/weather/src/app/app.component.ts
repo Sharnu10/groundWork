@@ -19,9 +19,9 @@ export class AppComponent implements OnInit {
   //  function to  get weather data for requested city.
   getWeatherData(city: string): void {
     this.http.get(`http://localhost:3030/api/weather/${city}`).subscribe({
-      next: (weatherData) => {
-        console.log('weatherData ', weatherData);
-        this.weatherData = weatherData;
+      next: (data: any) => {
+        console.log('data ', data);
+        this.weatherData = data.weatherData;
       },
       error: (error) => {
         console.log('error ', error);
