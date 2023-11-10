@@ -1,6 +1,11 @@
 <div class="container">
-  <div id="title">
-    {{ title }}
+  <div id="title">{{ title }}</div>
+
+  <div class="city">
+    <input type="text" placeholder="Enter city name" [(ngModel)]="cityName" />
+    <button class="btn btn-primary mx-1 py-1" (click)="getWeatherData()">
+      Submit
+    </button>
   </div>
 
   <div class="weather-container">
